@@ -1,3 +1,64 @@
 body {
   background: peachpuff;
 }
+
+*{
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.contanier{
+  display: flex;
+  min-height: 100vh;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+
+header{
+  width: 96%;
+  height: 10em;
+  margin: 1em;
+}
+
+.Query{
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+aside{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+aside > div{
+  width: 22%;
+  background: lightpink;
+}
+
+main{
+  flex-grow: 4;
+  margin: 1em;
+}
+
+@media(min-width: 600px){
+  .Query{
+    flex-direction: row;
+  }
+  aside{
+    width: 80%;
+    align-items: center;
+    margin-left: 1em;
+    flex: 2;
+  }
+  aside > div{
+    height: 10em;
+  }
+  main{
+    flex: 2;
+  }
+}
